@@ -1,8 +1,13 @@
 describe('Homepage is available', function () {
-    it('check if user can visit my homepage', function () {
+    it('check if homepage has correct url', function () {
         cy.visit('https://www.kruegermike.de')
-        cy.get('body > header > div > div > h1').contains('Madmike')
-        cy.wait(1500)
-    
+        cy.url().should('contain', 'https://www.kruegermike.de');
+
+    })
+
+    it('check if header element is visible', function () {
+        cy.visit('https://www.kruegermike.de')
+        cy.get('body > div').should('be.visible').contains('Hello World')
+
     })
 })
