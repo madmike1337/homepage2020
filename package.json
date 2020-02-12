@@ -4,7 +4,7 @@
   "description": "Krass E2E Jungee",
   "main": "index.js",
   "scripts": {
-    "test": "cypress run --spec 'cypress/integration/*'"
+    "test": "cypress run --spec 'cypress/integration/homepage.js'"
   },
   "devDependencies": {
     "cypress": "^4.0.0"
